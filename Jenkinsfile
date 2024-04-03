@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  tools { 
-      maven 'Maven 3.8.5' 
-      jdk 'Java 8' 
-  }
   stages {
     stage('check out') {
       steps {
@@ -18,5 +14,8 @@ pipeline {
     }
 
   }
+  tools {
+    maven 'Maven 3.8.5'
+    jdk 'Java 8'
+  }
 }
-
